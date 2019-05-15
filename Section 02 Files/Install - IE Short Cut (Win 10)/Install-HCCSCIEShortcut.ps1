@@ -1,0 +1,1 @@
+Copy-Item -Path $PSScriptRoot\'Internet Explorer.lnk' -Destination $env:SystemDrive'\Microsoft\Windows\Start Menu\Programs\Accessories' -Force

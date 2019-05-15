@@ -1,0 +1,4 @@
+New-Item -Path "E:\VMUGMDTBuildLab" -ItemType directory
+New-SmbShare -Name “VMugMDTBuildLab$" -Path "E:\VMUGMDTBuildLab" -FullAccess Administrators
+Import-Module "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploymentToolkit.psd1"
+new-PSDrive -Name "DS008" -PSProvider "MDTProvider" -Root “E:\VMugMDTBuildLab" -Description “VMug Build Lab" -NetworkPath "\\MDT01\VMugMDTBuildLab$" -Verbose | add-MDTPersistentDrive -Verbose
